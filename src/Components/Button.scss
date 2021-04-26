@@ -9,6 +9,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    font-family: "Russo One", sans-serif;
 }
 
 .btn--primary {
@@ -44,5 +45,6 @@
 
 .btn--outline:hover {
     background-color: var(--primary);
-    color: var(--secondary)
+    color: var(--secondary);
+    border: 3px solid var(--secondary);
 }
