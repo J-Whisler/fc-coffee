@@ -1,6 +1,6 @@
 :root {
     --primary: rgb(45, 34, 15);
-    --secondary: rgb(216, 192, 172);
+    --secondary: rgb(236,224,209);
 }
 
 .cards {
@@ -38,15 +38,16 @@
     display: flex;
     flex: 1;
     margin: 0 1rem;
-    border: 0.5rem;
+    border-radius: 0.5rem;
+    background: var(--secondary);
     .cards-item-link {
         display: flex;
         flex-flow: column;
         width: 100%;
-        box-shadow: 0 6px 20px rgba(45, 34, 15, 0.9);
-        -webkit-filter: drop-shadow(0 6px 20px rgba(45, 34, 15, 0.9));
-        filter: drop-shadow(0 6px 20px rgba(45, 34, 15, 0.2));
-        border-radius: 10px;
+        box-shadow: 0 6px 20px var(--primary);
+        -webkit-filter: drop-shadow(0 6px 20px var(--primary));
+        filter: drop-shadow(0 6px 20px var(--primary));
+        border-radius: 0.7rem;
         overflow: hidden;
         text-decoration: none;
         .cards-item-pic-wrap {
@@ -69,10 +70,10 @@
                 background-color: var(--primary);
                 box-sizing: border-box;
             }
-            .fade-img {
-                animation-name: fade-img;
-                animation-duration: 2s;
-            }
+            // .fade-img {
+            //     animation-name: fade-img;
+            //     animation-duration: 2s;
+            // }
 
             .cards-item-img {
                 position: absolute;
@@ -94,13 +95,14 @@
         }
         .cards-item-info {
             padding: 1.2rem 1.5rem 1.5rem;
+            
         }
         .cards-item-title {
             font-family: "Limelight", sans-serif;
             font-size: 1.8rem;
             color: var(--primary);
             text-decoration: underline;
-            text-shadow: 2px 2px 2px rgb(126, 85, 38);
+            text-shadow: 2px 2px 2px rgb(150,114,89);
         }
         .cards-item-text {
             color: var(--primary);
