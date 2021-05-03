@@ -1,6 +1,6 @@
 :root {
     --primary: rgb(45, 34, 15);
-    --secondary: rgb(216, 192, 172);
+    --secondary: rgb(236,224,209);
 }
 
 .nav {
@@ -22,7 +22,7 @@
         // max-width: 1500px;
         // border: 5px solid black;
         padding-right: 5rem;
-
+        
     
         .nav-logo {
             color: var(--secondary);
@@ -53,6 +53,10 @@
                 font-size: 1.5rem;
                 letter-spacing: 0.6rem;
             }
+        }
+        .menu-icon {
+            // display: none;
+            color: transparent
         }
         .nav-menu {
             display: grid;
@@ -96,12 +100,61 @@
                 display: none;  
             }
         }
-
-        .menu-icon {
-            display: none;
-            .fa-times {
-                color: var(--primary);
-            }
-        }
     }
 }
+
+@media screen and (max-width: 960px) {
+    .nav {
+        .nav-container {
+        //     position: relative;
+        // height: 90vh;
+        // top: 5.5rem;
+        // width: 100%;
+        // box-shadow: 100px 100px 250px var(--primary), -100px -100px 250px var(--primary);
+        // z-index: -1;
+        // overflow-x: hidden;
+            .menu-icon {
+                color: var(--primary);
+                font-size: 2.5rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+           .nav-menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 90vh;
+            position: absolute;
+            top: 5.5rem;
+            left: -100%;
+            opacity: 1;
+            transition: all 0.5s ease;
+            &.active {
+                background: var(--secondary);
+                left: 0;
+                // opacity: 1;
+                transition: all 0.5s ease;
+                z-index: 1;
+                .nav-item {
+                    margin: 5rem auto;
+                    .nav-links {
+                        text-align: center;
+                        // padding: 3rem; 
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        top: -5rem;
+                        color: var(--primary);
+                        // padding: 5rem auto;
+                        &:active {
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            }
+          }
+        }
+    }

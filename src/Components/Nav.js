@@ -66,7 +66,7 @@ const Nav = () => {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                Rewards
               </Link>
             </li>
           </ul>
