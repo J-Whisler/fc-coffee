@@ -1,6 +1,6 @@
 :root {
     --primary: rgb(45, 34, 15);
-    --secondary: rgb(216, 192, 172);
+    --secondary: rgb(236,224,209);
 }
 
 .showcase-container {
@@ -62,5 +62,90 @@
         top: 10rem;
         right: 3rem;
         
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .showcase-container {
+        .fccc {
+            .fccc-top {
+                font-size: 1.9rem;
+                letter-spacing: 0.2rem;
+                margin-top: 3rem;
+            }
+            .fccc-middle {
+                font-size: 2.8rem;
+                letter-spacing: 1.7rem;
+                
+            }
+            .fccc-bottom {
+                font-size: 2.5rem;
+                margin-top: 8rem;
+                span {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+        .showcase-btns {
+            // border: 2px solid var(--primary);
+            width: 70%;
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            // right: 12rem;
+            .btns {
+                transition: all .3s ease-in;
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .showcase-container {
+        .fccc {
+            .fccc-top {
+                font-size: 1.8rem;
+                letter-spacing: .1rem;
+            }
+            .fccc-middle {
+                font-size: 2rem;
+                letter-spacing: 0.8rem;
+            }
+            .fccc-bottom {
+                font-size: 2.2rem;
+                span {
+                    font-size: 2.4rem;
+                    letter-spacing: 0.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .showcase-container {
+        .fccc {
+            .fccc-top {
+                font-size: 1.3rem;
+                letter-spacing: 0rem;
+            }
+            .fccc-middle {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+            
+            .fccc-bottom {
+                font-size: 1.7rem;
+                margin-top: 12rem;
+                span {
+                    font-size: 1.8rem;
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
     }
 }
